@@ -186,6 +186,10 @@ local update = void(function()
    end
 end)
 
+M.invalidate_blame_cache = function()
+    BlameCache.contents = {}
+end
+
 M.setup = function()
    local group = api.nvim_create_augroup('gitsigns_blame', {})
 
